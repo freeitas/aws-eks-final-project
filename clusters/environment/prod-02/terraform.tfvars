@@ -66,13 +66,13 @@ alb_controller = {
 }
 
 tags = {
-  "Project"     = "aws-eks-final-project"
+  "Project"     = "aws-eks-multicluster"
   "Environment" = "production"
 }
 
 create_argocd_access_role = true
-argocd_access_role_name   = "aws-eks-final-project-argocd-access-prod-02"
+argocd_access_role_name   = "aws-eks-multicluster-argocd-access-prod-02"
 
 argocd_access_trusted_role_names = [
-  "aws-eks-final-project-argocd-control-plane"
+  "aws-eks-multicluster-argocd-control-plane"
 ]

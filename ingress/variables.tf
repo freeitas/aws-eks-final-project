@@ -7,7 +7,7 @@ variable "region" {
 variable "project" {
   description = "Project name, applied as a tag to every resource created by this root."
   type        = string
-  default     = "eks-final-project"
+  default     = "eks-multicluster"
 }
 
 variable "name_prefix" {

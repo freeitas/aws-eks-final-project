@@ -1,4 +1,4 @@
-# aws-eks-final-project
+# aws-eks-multicluster
 
 A distributed environment running multiple Kubernetes clusters on AWS. Helm
 charts, addons and application workloads are managed centrally with ArgoCD, and
@@ -27,7 +27,7 @@ Each production cluster is registered with an IAM role the control plane assumes
 
 FluentBit, the OTel Collector and Prometheus push out of production into a separate observability cluster, over one internal NLB and one private Route 53 record per signal, into one S3 bucket per signal. Per-cluster Prometheus and Grafana is fewer moving parts, but then telemetry dies with the cluster I need to debug, and a trace crossing both active/active clusters can never be reassembled. Separate endpoints keep a log flood from starving metric writes and let retention differ per signal. Loki runs simple scalable — write path, read path, backend — while Tempo and Mimir run full microservices, because only traces and metrics need distributors, ingesters and queriers scaled apart here.
 
-Like the [ECS project](https://github.com/freeitas/aws-ecs-final-project), the
+Like the [ECS project](https://github.com/freeitas/aws-ecs-multiregion), the
 goal is to provide mechanisms for scaling sustainably and resiliently in
 medium-to-large corporate environments.
 
@@ -105,8 +105,8 @@ this repository creates either one**. They have to exist before the first
 
 | Resource | Name |
 |---|---|
-| S3 bucket | `eks-final-project-tfstate` |
-| DynamoDB lock table | `eks-final-project-tfstate-lock` |
+| S3 bucket | `eks-multicluster-tfstate` |
+| DynamoDB lock table | `eks-multicluster-tfstate-lock` |
 
 The lock table needs a partition key named `LockID` of type `String`; that is what
 the S3 backend expects, and `init` fails against a table shaped any other way.

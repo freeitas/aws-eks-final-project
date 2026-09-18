@@ -1,8 +1,8 @@
-project_name = "aws-eks-final-project"
+project_name = "aws-eks-multicluster"
 region       = "us-east-1"
 
 tags = {
-  "Project"     = "aws-eks-final-project"
+  "Project"     = "aws-eks-multicluster"
   "Environment" = "control-plane"
   "ManagedBy"   = "terraform"
 }

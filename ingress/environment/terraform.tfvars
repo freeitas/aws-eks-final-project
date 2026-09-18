@@ -1,5 +1,5 @@
 region      = "us-east-1"
-project     = "eks-final-project"
+project     = "eks-multicluster"
 name_prefix = "efp"
 
 # The ALB and both target groups live in this cluster's VPC; the other

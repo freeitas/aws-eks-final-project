@@ -1,5 +1,5 @@
 region      = "us-east-1"
-project     = "eks-final-project"
+project     = "eks-multicluster"
 name_prefix = "efp"
 
 # The two active/active production clusters. clusters/ gives them 10.0.0.0/16

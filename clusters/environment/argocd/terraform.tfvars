@@ -66,6 +66,6 @@ alb_controller = {
 }
 
 tags = {
-  "Project"     = "aws-eks-final-project"
+  "Project"     = "aws-eks-multicluster"
   "Environment" = "platform"
 }

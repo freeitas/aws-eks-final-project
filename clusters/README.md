@@ -27,8 +27,8 @@ terraform apply -var-file=environment/prod-01/terraform.tfvars
 Re-run `init` with `-reconfigure` when switching environments: each one keeps
 its state under a different key in the same bucket.
 
-The S3 bucket `eks-final-project-tfstate` and the DynamoDB lock table
-`eks-final-project-tfstate-lock` are prerequisites — no root in this repository
+The S3 bucket `eks-multicluster-tfstate` and the DynamoDB lock table
+`eks-multicluster-tfstate-lock` are prerequisites — no root in this repository
 creates them, and `ingress/` and `observability/` expect the same two.
 
 ## What it creates

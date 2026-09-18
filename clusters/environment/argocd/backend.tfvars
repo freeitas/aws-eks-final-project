@@ -1,5 +1,5 @@
-bucket         = "eks-final-project-tfstate"
+bucket         = "eks-multicluster-tfstate"
 key            = "clusters/argocd/terraform.tfstate"
 region         = "us-east-1"
-dynamodb_table = "eks-final-project-tfstate-lock"
+dynamodb_table = "eks-multicluster-tfstate-lock"
 encrypt        = true

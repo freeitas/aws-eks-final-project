@@ -1,5 +1,5 @@
 region      = "us-east-1"
-project     = "eks-final-project"
+project     = "eks-multicluster"
 name_prefix = "efp"
 
 # The LGTM stack runs on its own cluster, away from the workloads it observes.
